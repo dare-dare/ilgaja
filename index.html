@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .buttons {
+        border-bottom: 1px solid #ccc;
+      }
+      .page-button {
+        border: none;
+        padding: 0.5em;
+        font-weight: bold;
+        cursor: pointer;
+        margin: 1em 5px;
+        background-color: rgb(0, 82, 204);
+        color: rgb(255, 255, 255);
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buttons">
+      <button class="page-button" id="page1">3-1 page</button>
+      <button class="page-button" id="page2">3-2 page</button>
+      <button class="page-button" id="page3">4-2 page</button>
+    </div>
+    <div id="content"></div>
+  </body>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#content").load("m3-1.html");
+    });
+    $("#page1").click(function () {
+      $("#content").load("m3-1.html");
+    });
+    $("#page2").click(function () {
+      $("#content").load("m3-2.html");
+    });
+    $("#page3").click(function () {
+      $("#content").load("m4-2.html");
+    });
+  </script>
+</html>

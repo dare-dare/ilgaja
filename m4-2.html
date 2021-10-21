@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>일가자</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/jquery-ui.css" />
+    <link rel="stylesheet" href="./plugin/pickadate/default.css" />
+    <link rel="stylesheet" href="./plugin/pickadate/default.date.css" />
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./plugin/pickadate/picker.js"></script>
+    <script src="./plugin/pickadate/picker.date.js"></script>
+    <script src="./plugin/pickadate/legacy.js"></script>
+  </head>
+  <body>
+    <div class="mo-menubox-background" id="mo-menubox">
+      <div class="mo-menubox">
+        <div class="mo-menu-head">
+          <div class="mo-menu-box-logo">
+            <img src="./images/logo/logo.png" alt="logo_w" />
+          </div>
+          <div class="pop-close-box" id="menu-close">
+            <div class="pop-close"></div>
+          </div>
+        </div>
+        <div class="mo-menu-body">
+          <div class="member-box list2">
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/login.png" alt="m_login" />
+                  </div>
+                  <div class="text">로그인</div>
+                </div>
+              </a>
+            </div>
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/join.png" alt="m_join" />
+                  </div>
+                  <div class="text">회원가입</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="myinfo-box">
+            <div class="myinfo">
+              <img src="./images/icon/m_profile.png" alt="m_profile" />
+              <label>김인정</label> 님
+            </div>
+          </div>
+
+          <div class="member-box list3">
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/m_myinfo.png" alt="m_myinfo" />
+                  </div>
+                  <div class="text">나의 정보</div>
+                </div>
+              </a>
+            </div>
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/m_alarm.png" alt="m_alarm" />
+                  </div>
+                  <div class="text">알림함</div>
+                </div>
+              </a>
+            </div>
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/m_logout.png" alt="m_logout" />
+                  </div>
+                  <div class="text">로그아웃</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="sub-menu-box">
+            <ul>
+              <li>
+                <a href="">인력요청</a>
+              </li>
+              <li>
+                <a href="">출역관리</a>
+              </li>
+              <li>
+                <a href="">노무관리</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mo-menu-foot">
+          <p class="title">㈜잡앤파트너</p>
+          <p>서울특별시 마포구 동교로 22길 50</p>
+          <p>진희빌딩 301호</p>
+          <p>고객센터 : 1688 1903</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header>
+        <div class="mo-header-area">
+          <div class="mo-menu-btn" id="mo-menu-btn">
+            <img src="./images/icon/mo-menu.png" alt="mo-menu" />
+          </div>
+          <div class="mo-page-title">
+            <span>나의 정보</span>
+          </div>
+          <div class="mo-logo-box">
+            <img src="./images/logo/o_logo.png" alt="o_logo" />
+          </div>
+        </div>
+        <div class="header-area">
+          <div class="logo-box">
+            <a href="./">
+              <img src="./images/logo/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="gnb-box">
+            <div class="menu-box">
+              <ul>
+                <li>
+                  <a href="./sub.php">인력요청</a>
+                </li>
+                <li>
+                  <a href="./partners.php">출역관리</a>
+                </li>
+                <li>
+                  <a href="./partners_vision.php">노무관리</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-btn-box font-light">
+              <span class="header-btn">
+                <a class="font-light" href="">회원가입</a>
+              </span>
+              <span class="menu-division">|</span>
+              <span class="header-btn">
+                <a class="font-light" href="">로그인</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <script>
+        $("#mo-menu-btn").bind("click", function () {
+          $("body").addClass("on");
+        });
+        $("#menu-close").bind("click", function () {
+          $("body").removeClass("on");
+        });
+      </script>
+      <div class="mypage-area tax-bill-mypage">
+        <div class="section mypage">
+          <div class="mypage-back">
+            <a href="">
+              <img src="./images/icon/left_arrow.png" alt="left_arrow" />
+            </a>
+          </div>
+          <div class="section-title-box">
+            <span class="section-title sm">회사수정</span>
+          </div>
+          <div class="myinfo-line name">
+            <div class="text">회사수정</div>
+          </div>
+        </div>
+        <div class="tax-bill-contents-bg my-page">
+          <div class="tax-bill-contents">
+            <div class="tax-bill-input-row company">
+              <div class="tax-bill-title">회사</div>
+              <div class="tax-bill-company">갑을아파트</div>
+            </div>
+            <div class="tax-bill-input-row">
+              <div class="tax-bill-title error">
+                사업자등록번호<span class="tax-bill-point-color">&#8270;</span>
+              </div>
+              <div class="tax-bill-input-wrapper error">
+                <input
+                  class="tax-bill-input"
+                  placeholder="-없이 입력해주세요."
+                /><button class="tax-bill-button">조회</button>
+                <div class="tax-bill-input-noti">
+                  <p>&#8226;사업자등록번호 조회가 필요합니다.</p>
+                </div>
+              </div>
+            </div>
+            <div class="tax-bill-input-row">
+              <div class="tax-bill-title">
+                사업자등록증<span class="tax-bill-point-color">&#8270;</span>
+              </div>
+              <div class="tax-bill-input-wrapper">
+                <input
+                  class="tax-bill-input"
+                  placeholder="사업자등록증을 첨부해 주세요."
+                /><button class="tax-bill-button">
+                  <img src="./images/icon/file.png" alt="file" />
+                  <span class="tax-bill-button-text">첨부</span>
+                </button>
+              </div>
+            </div>
+            <div class="tax-bill-input-row">
+              <div class="tax-bill-title">
+                성명<span class="tax-bill-point-color">&#8270;</span>
+              </div>
+              <div class="tax-bill-input-wrapper">
+                <input
+                  class="tax-bill-input"
+                  placeholder="대표자 성명을 입력해주세요."
+                />
+              </div>
+            </div>
+            <div class="tax-bill-input-row">
+              <div class="tax-bill-title">주소</div>
+              <div class="tax-bill-input-wrapper">
+                <input
+                  class="tax-bill-input"
+                  placeholder="주소를 입력해주세요."
+                />
+              </div>
+            </div>
+            <div class="tax-bill-input-row">
+              <div class="tax-bill-title">업종</div>
+              <div class="tax-bill-input-wrapper">
+                <input
+                  class="tax-bill-input"
+                  placeholder="업종을 입력해주세요."
+                />
+              </div>
+            </div>
+            <div class="tax-bill-input-row">
+              <div class="tax-bill-title">업태</div>
+              <div class="tax-bill-input-wrapper">
+                <input
+                  class="tax-bill-input"
+                  placeholder="업태를 입력해주세요."
+                />
+              </div>
+            </div>
+            <button class="tax-bill-button large">완료</button>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="footer-area">
+          <div class="footer-btn-box">
+            <span class="footer-btn">
+              <a href="">서비스 이용약관</a>
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              <a href="">개인정보취급방침</a>
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              <a href="">자주묻는 질문</a>
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              <a href="">공지사항</a>
+            </span>
+            <span class="footer-division sm-hd">|</span>
+            <span class="footer-btn sm-hd">
+              <a class="font-light" href="">고객센터 : 1688 1903</a>
+            </span>
+          </div>
+          <div class="footer-info-box">
+            <span class="footer-btn"> ㈜잡앤파트너 </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              서울특별시 마포구 동교로 22길 50 진희빌딩 301호
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn"> 사업자번호 445-88-01404 </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn"> 통신판매 2019-서울구로-1185호 </span>
+          </div>
+          <div class="footer-logo-box">
+            <span class="footer-logo">
+              <img src="./images/logo/foot_logo.png" alt="foot_logo" />
+            </span>
+            <span class="footer-ico-box">
+              <div class="iconbox">
+                <a href="">
+                  <img src="./images/logo/apple_logo.png" alt="apple_logo" />
+                </a>
+                <a href="">
+                  <img src="./images/logo/google_logo.png" alt="google_logo" />
+                </a>
+              </div>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

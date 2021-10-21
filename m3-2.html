@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>일가자</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/jquery-ui.css" />
+    <link rel="stylesheet" href="./plugin/pickadate/default.css" />
+    <link rel="stylesheet" href="./plugin/pickadate/default.date.css" />
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./plugin/pickadate/picker.js"></script>
+    <script src="./plugin/pickadate/picker.date.js"></script>
+    <script src="./plugin/pickadate/legacy.js"></script>
+  </head>
+  <body>
+    <div class="mo-menubox-background" id="mo-menubox">
+      <div class="mo-menubox">
+        <div class="mo-menu-head">
+          <div class="mo-menu-box-logo">
+            <img src="./images/logo/logo.png" alt="logo_w" />
+          </div>
+          <div class="pop-close-box" id="menu-close">
+            <div class="pop-close"></div>
+          </div>
+        </div>
+        <div class="mo-menu-body">
+          <div class="member-box list2">
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/login.png" alt="m_login" />
+                  </div>
+                  <div class="text">로그인</div>
+                </div>
+              </a>
+            </div>
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/join.png" alt="m_join" />
+                  </div>
+                  <div class="text">회원가입</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="myinfo-box">
+            <div class="myinfo">
+              <img src="./images/icon/m_profile.png" alt="m_profile" />
+              <label>김인정</label> 님
+            </div>
+          </div>
+
+          <div class="member-box list3">
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/m_myinfo.png" alt="m_myinfo" />
+                  </div>
+                  <div class="text">나의 정보</div>
+                </div>
+              </a>
+            </div>
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/m_alarm.png" alt="m_alarm" />
+                  </div>
+                  <div class="text">알림함</div>
+                </div>
+              </a>
+            </div>
+            <div class="list">
+              <a href="">
+                <div class="member-box-action">
+                  <div class="img">
+                    <img src="./images/icon/m_logout.png" alt="m_logout" />
+                  </div>
+                  <div class="text">로그아웃</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="sub-menu-box">
+            <ul>
+              <li>
+                <a href="">인력요청</a>
+              </li>
+              <li>
+                <a href="">출역관리</a>
+              </li>
+              <li>
+                <a href="">노무관리</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mo-menu-foot">
+          <p class="title">㈜잡앤파트너</p>
+          <p>서울특별시 마포구 동교로 22길 50</p>
+          <p>진희빌딩 301호</p>
+          <p>고객센터 : 1688 1903</p>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header>
+        <div class="mo-header-area">
+          <div class="mo-menu-btn" id="mo-menu-btn">
+            <img src="./images/icon/mo-menu.png" alt="mo-menu" />
+          </div>
+          <div class="mo-page-title">
+            <span>인력요청</span>
+          </div>
+          <div class="mo-logo-box">
+            <img src="./images/logo/o_logo.png" alt="o_logo" />
+          </div>
+        </div>
+        <div class="header-area">
+          <div class="logo-box">
+            <a href="./">
+              <img src="./images/logo/logo.png" alt="logo" />
+            </a>
+          </div>
+          <div class="gnb-box">
+            <div class="menu-box">
+              <ul>
+                <li>
+                  <a href="./sub.php">인력요청</a>
+                </li>
+                <li>
+                  <a href="./partners.php">출역관리</a>
+                </li>
+                <li>
+                  <a href="./partners_vision.php">노무관리</a>
+                </li>
+              </ul>
+            </div>
+            <div class="header-btn-box font-light">
+              <span class="header-btn">
+                <a class="font-light" href="">회원가입</a>
+              </span>
+              <span class="menu-division">|</span>
+              <span class="header-btn">
+                <a class="font-light" href="">로그인</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <script>
+        $("#mo-menu-btn").bind("click", function () {
+          $("body").addClass("on");
+        });
+        $("#menu-close").bind("click", function () {
+          $("body").removeClass("on");
+        });
+      </script>
+      <div class="section pay tax-bill-desktop">
+        <div class="top">
+          <div class="top-img">
+            <img src="./images/icon/logo_w.png" alt="logo_w" />
+          </div>
+          <div class="manage-title">노무 인력을 한번에 관리 하는 노무관리</div>
+        </div>
+      </div>
+      <!--<div class="section manage pay"></div>-->
+      <div class="tax-bill-area">
+        <div class="tax-bill-tabs">
+          <button class="tab left">노무대장 조회</button>
+          <span class="tab-division">|</span>
+          <button class="tab right active">면세계산서 발행</button>
+        </div>
+        <div class="tax-bill-contents-bg list">
+          <div class="tax-bill-contents full">
+            <div class="tax-bill-list-guide">
+              <div class="tax-bill-list-guide-text">
+                <p class="tax-bill-title">안내</p>
+                <ul class="tax-bill-noti">
+                  <li>
+                    &#8226;월 정산 마감일(계산서 발행 신청) :
+                    <span class="tax-bill-point-color">익월 4일</span>
+                  </li>
+                  <li>&#8226;계산서 발행 마감일 : 익월 10일</li>
+                </ul>
+              </div>
+              <div class="tax-bill-buttons">
+                <button class="tax-bill-button medium">정보 수정</button>
+                <button class="tax-bill-button medium">발행 중지</button>
+              </div>
+            </div>
+            <div class="tax-bill-list-header">
+              <span class="tax-bill-title">내역조회</span>
+              <div class="company-lg-select-area tax-bill-date">
+                <div class="select-selected tax-bill-date" id="company-select">
+                  <div class="select-arrow"></div>
+                  <span>2021-08</span>
+                  <div class="option-box">
+                    <div class="option-in">
+                      <div class="select-text">
+                        <span>2021-07</span>
+                      </div>
+                      <div class="select-text">
+                        <span>2021-06</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span class="tax-bill-title">합계</span>
+              <span class="tax-bill-point-color tax-bill-total"
+                >10,000,000원</span
+              >
+            </div>
+            <table class="tax-bill-list">
+              <tr>
+                <th class="tax-bill-desktop"></th>
+                <th>작성일자</th>
+                <th>공급자 상호</th>
+                <th class="tax-bill-desktop">공급자 등록번호</th>
+                <th class="tax-bill-desktop">발행 이메일</th>
+                <th>공급가액</th>
+                <th>상태</th>
+              </tr>
+              <tr>
+                <td class="tax-bill-desktop">1</td>
+                <td>20210831</td>
+                <td>(주)잡앤파트너</td>
+                <td class="tax-bill-desktop">1234567890</td>
+                <td class="tax-bill-desktop">eamil@email</td>
+                <td>12,120,000</td>
+                <td>발행예정</td>
+              </tr>
+              <tr>
+                <td class="tax-bill-desktop">2</td>
+                <td>20210831</td>
+                <td>(주)잡앤파트너</td>
+                <td class="tax-bill-desktop">1234567890</td>
+                <td class="tax-bill-desktop">eamil@email</td>
+                <td>12,120,000</td>
+                <td>발행예정</td>
+              </tr>
+              <tr>
+                <td class="tax-bill-desktop">2</td>
+                <td>20210831</td>
+                <td>(주)잡앤파트너</td>
+                <td class="tax-bill-desktop">1234567890</td>
+                <td class="tax-bill-desktop">eamil@email</td>
+                <td>12,120,000</td>
+                <td>발행예정</td>
+              </tr>
+              <tr>
+                <td class="tax-bill-desktop">2</td>
+                <td>20210831</td>
+                <td>(주)잡앤파트너</td>
+                <td class="tax-bill-desktop">1234567890</td>
+                <td class="tax-bill-desktop">eamil@email</td>
+                <td>12,120,000</td>
+                <td>발행예정</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-area">
+          <div class="footer-btn-box">
+            <span class="footer-btn">
+              <a href="">서비스 이용약관</a>
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              <a href="">개인정보취급방침</a>
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              <a href="">자주묻는 질문</a>
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              <a href="">공지사항</a>
+            </span>
+            <span class="footer-division sm-hd">|</span>
+            <span class="footer-btn sm-hd">
+              <a class="font-light" href="">고객센터 : 1688 1903</a>
+            </span>
+          </div>
+          <div class="footer-info-box">
+            <span class="footer-btn"> ㈜잡앤파트너 </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn">
+              서울특별시 마포구 동교로 22길 50 진희빌딩 301호
+            </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn"> 사업자번호 445-88-01404 </span>
+            <span class="footer-division">|</span>
+            <span class="footer-btn"> 통신판매 2019-서울구로-1185호 </span>
+          </div>
+          <div class="footer-logo-box">
+            <span class="footer-logo">
+              <img src="./images/logo/foot_logo.png" alt="foot_logo" />
+            </span>
+            <span class="footer-ico-box">
+              <div class="iconbox">
+                <a href="">
+                  <img src="./images/logo/apple_logo.png" alt="apple_logo" />
+                </a>
+                <a href="">
+                  <img src="./images/logo/google_logo.png" alt="google_logo" />
+                </a>
+              </div>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="ilgaja-modal-wrap" id="profile-pop">
+      <div class="ilgaja-pop profile">
+        <div class="ilgaja-pop-head">
+          <div class="worker-profile-box">
+            <div class="worker-profile-img">
+              <img src="./images/sub/profile_sample.png" alt="profile_sample" />
+            </div>
+            <div class="worker-profile">
+              <div class="worker-profile-name">남궁현수 (남)</div>
+              <div class="worker-profile-info font-light">
+                <img
+                  src="./images/icon/profile_phone.png"
+                  alt="profile_phone"
+                />
+                010-1204-1204
+              </div>
+              <div class="worker-profile-info font-light">
+                <img src="./images/icon/profile_home.png" alt="profile_phone" />
+                서울시 서초구 방배로 900, 1층
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ilgaja-pop-body">
+          <div class="worker-detail-box mgb20">
+            <div class="worker-detail">
+              <div class="worker-detail-title">계좌번호</div>
+              <div class="worker-detail-content font-light">
+                카카오뱅크 3333-03-123456
+              </div>
+            </div>
+            <div class="worker-detail">
+              <div class="worker-detail-title">전문분야</div>
+              <div class="worker-detail-content font-light">
+                잡부, 양중, 조공, 이사짐, 신호수, 행사보조, 철거, 농사일,
+                창고정리
+              </div>
+            </div>
+            <div class="worker-detail">
+              <div class="worker-detail-title">자격증</div>
+              <div class="worker-detail-content font-light">
+                <p>기초안건보건교육증</p>
+                <p>기업재난관리사 자격증</p>
+                <p>해연료물질취급면허 (감독) 자격증</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pay-list-tbl-box pay-pop-tbl custom-tbl-box"
+            style="margin-bottom: 10px"
+          >
+            <table class="pay-tbl">
+              <colgroup>
+                <col width="15%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>작업일</th>
+                  <th>직종</th>
+                  <th>단가</th>
+                  <th>지급총액</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+          <div class="pay-list-tbl-box pay-pop-tbl custom-tbl-box">
+            <table class="pay-tbl">
+              <colgroup>
+                <col width="15%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+              </colgroup>
+              <tbody>
+                <tr>
+                  <td class="hd">
+                    <p>1</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>2</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>3</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>4</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>5</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>6</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>6</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>6</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>6</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="hd">
+                    <p>6</p>
+                  </td>
+                  <td class="inline" data-label="작업일">
+                    <p>2020-11-10</p>
+                  </td>
+                  <td class="inline-block day" data-label="직종 :&nbsp;">
+                    <p>하스리할석</p>
+                  </td>
+                  <td class="inline-block price" data-label="단가 :&nbsp;">
+                    <p>250,000</p>
+                  </td>
+                  <td class="block" data-label="지급액">
+                    <p>21,853,000</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="pay-list-tbl-box pay-pop-tbl custom-tbl-box">
+            <table class="pay-tbl">
+              <colgroup>
+                <col width="15%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+                <col width="21.25%" />
+              </colgroup>
+              <tfoot>
+                <tr>
+                  <td class="hd"></td>
+                  <td class="hd"></td>
+                  <td class="hd"></td>
+                  <td>총계</td>
+                  <td class="total">91,853,000</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="ilgaja-pop-foot">
+          <div class="ilgaja-btn-box">
+            <span class="ilgaja-btn cancel" onclick="popupClose('profile-pop');"
+              >닫기</span
+            >
+          </div>
+        </div>
+        <div class="pop-close-box" onclick="popupClose('profile-pop');">
+          <div class="pop-close"></div>
+        </div>
+      </div>
+    </div>
+    <div id="date-container"></div>
+    <div class="mask" id="mask"></div>
+  </body>
+  <script>
+    var $input = $("#date1").pickadate({
+      monthsFull: [
+        "1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월",
+        "9월",
+        "10월",
+        "11월",
+        "12월",
+      ],
+      monthsShort: [
+        "1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월",
+        "9월",
+        "10월",
+        "11월",
+        "12월",
+      ],
+      weekdaysFull: [
+        "일요일",
+        "월요일",
+        "화요일",
+        "수요일",
+        "목요일",
+        "금요일",
+        "토요일",
+      ],
+      weekdaysShort: ["일", "월", "화", "수", "목", "금", "토"],
+      format: "yyyy년 mm월 dd일",
+      formatSubmit: undefined,
+      // min: [2015, 7, 14],
+      container: "#date-container",
+      // editable: true,
+      closeOnSelect: false,
+      closeOnClear: false,
+      today: false,
+      clear: false,
+      close: false,
+      closeOnSelect: true,
+      closeOnClear: true,
+    });
+    var picker = $input.pickadate("picker");
+    var $input2 = $("#date2").pickadate({
+      monthsFull: [
+        "1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월",
+        "9월",
+        "10월",
+        "11월",
+        "12월",
+      ],
+      monthsShort: [
+        "1월",
+        "2월",
+        "3월",
+        "4월",
+        "5월",
+        "6월",
+        "7월",
+        "8월",
+        "9월",
+        "10월",
+        "11월",
+        "12월",
+      ],
+      weekdaysFull: [
+        "일요일",
+        "월요일",
+        "화요일",
+        "수요일",
+        "목요일",
+        "금요일",
+        "토요일",
+      ],
+      weekdaysShort: ["일", "월", "화", "수", "목", "금", "토"],
+      format: "yyyy년 mm월 dd일",
+      formatSubmit: undefined,
+      // min: [2015, 7, 14],
+      container: "#date-container",
+      // editable: true,
+      closeOnSelect: false,
+      closeOnClear: false,
+      today: false,
+      clear: false,
+      close: false,
+      closeOnSelect: true,
+      closeOnClear: true,
+    });
+    var picker2 = $input2.pickadate("picker");
+
+    $(".date-img").bind("click", function () {
+      var dateId = $(this).attr("data-id");
+      $("#" + dateId).click();
+    });
+
+    $("#company-select").bind("click", function () {
+      if ($(this).hasClass("on")) {
+        $(this).removeClass("on");
+        $("#mask").hide();
+      } else {
+        var targetClass = "select-selected";
+        $(this).addClass("on");
+        $("#mask").show().attr("data-class", targetClass);
+      }
+    });
+    $(".openProfile").bind("click", function () {
+      popupOpen("profile-pop");
+    });
+    function popupOpen(id) {
+      $("#" + id).addClass("on");
+      $("body").css("overflow", "hidden");
+    }
+    function popupClose(id) {
+      $("#" + id).removeClass("on");
+      $("body").css("overflow", "auto");
+    }
+
+    $("#mask").on("click", function () {
+      var targetClass = $(this).attr("data-class");
+      $("." + targetClass).removeClass("on");
+      $(this).hide();
+    });
+  </script>
+</html>
